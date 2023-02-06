@@ -2,20 +2,18 @@ import store from '../../store';
 import { mockNetWorkResponse } from '../../utils/test.data';
 
 describe('Users page', () => {
-
   beforeAll(() => {
     mockNetWorkResponse();
   });
 
-  it('should have an initial albums state', () => {
-    const state = store.getState().albums
+  it('should have an initial photos state', () => {
+    const state = store.getState().photos;
     expect(state).toEqual({
-      albums: [],
-      album: {},
-      albumPhotos: [],
+      photo: {},
+      photos: [],
       status: 'idle',
-    })
-  })
+    });
+  });
 
   // it('should be able to fetch the album list', async () => {
   //   const result = await store.dispatch(fetchAlbums());
@@ -30,6 +28,4 @@ describe('Users page', () => {
 
   //   // expect(state.users).toContain(getUserListResponse[0]);
   // });
-
 });
-
