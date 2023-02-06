@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
 import userReducer from './Pages/Users/usersSlice';
+import albumsSlice from './Pages/Albums/albumsSlice';
 
 const store = configureStore({
   reducer: {
     users: userReducer,
+    albums:albumsSlice,
+
   },
 });
 

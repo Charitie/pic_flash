@@ -2,6 +2,7 @@ import _ from 'lodash';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
+import { fetchAlbums } from '../Pages/Albums/albumsSlice';
 import { fetchUsers } from '../Pages/Users/usersSlice';
 import { AppDispatch } from '../store';
 
@@ -13,6 +14,8 @@ export function useSearchInput() {
   const filteredData = () => {
     if (pathname.includes('/users')) {
       dispatch(fetchUsers(searchParam));
+    } else if (pathname.includes('/albums')) {
+      dispatch(fetchAlbums(searchParam));
     }
   };
 

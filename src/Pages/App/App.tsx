@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import Layout from '../../Components/Layout/Layout';
 import Private from '../../utils/PrivateRoutes';
+import Albums from '../Albums/Albums';
+import SingleAlbum from '../Albums/SingleAlbum';
 import Landing from '../Landing/Landing';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import SingleUser from '../Users/SingleUser';
@@ -31,6 +33,22 @@ function App() {
               }
             />
           </Route>
+          <Route
+            path='albums'
+            element={
+              <Private>
+                <Albums />
+              </Private>
+            }
+          />
+          <Route
+            path='albums/:id'
+            element={
+              <Private>
+                <SingleAlbum />
+              </Private>
+            }
+          />
         </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>

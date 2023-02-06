@@ -79,6 +79,7 @@ const usersSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(fetchUserAlbums.fulfilled, (state, action) => {
+        state.status = 'fulfilled';
         state.userAlbums = action.payload;
       });
   },

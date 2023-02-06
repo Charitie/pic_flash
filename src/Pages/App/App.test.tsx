@@ -2,6 +2,8 @@ import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { renderWithContext } from '../../utils/test.data';
+import Albums from '../Albums/Albums';
+import SingleAlbum from '../Albums/SingleAlbum';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import SingleUser from '../Users/SingleUser';
 import Users from '../Users/Users';
@@ -29,5 +31,17 @@ describe('Pages', () => {
     const userRoute = '/users/1';
     renderWithContext(<SingleUser />, userRoute);
     expect(screen.getByTestId('single-user')).toBeInTheDocument();
+  });
+
+  it('should render albums page', () => {
+    const albumRoute = '/albums';
+    renderWithContext(<Albums />, albumRoute);
+    expect(screen.getByTestId('albums')).toBeInTheDocument();
+  });
+
+  it('should render single album page', () => {
+    const singleAlbum = '/albums/1';
+    renderWithContext(<SingleAlbum />, singleAlbum);
+    expect(screen.getByTestId('single-album')).toBeInTheDocument();
   });
 });
