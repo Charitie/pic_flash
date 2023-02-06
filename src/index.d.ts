@@ -1,0 +1,1 @@
+declare module '*.gif .png .jpeg .svg';
