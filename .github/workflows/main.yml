@@ -56,15 +56,5 @@ jobs:
       - name: Execute test cases
         run: npm run test
 
-      - name: Run tests and collect coverage
-        run: pytest --cov .
-      - name: Upload coverage reports to Codecov
-        run: |
-          # Replace `linux` below with the appropriate OS
-          # Options are `alpine`, `linux`, `macos`, `windows`
-          curl -Os https://uploader.codecov.io/latest/linux/codecov
-          chmod +x codecov
-          ./codecov -t ${CODECOV_TOKEN}
-
       - name: Create test build
         run: npm run build
