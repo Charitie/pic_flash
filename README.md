@@ -25,6 +25,7 @@ This project for viewing user's albums and photos
 - Jest
 - Eslint
 - Prettier
+- husky - pre-commit testing
 - CI/CD
 - Vercel hosting platform
 - Google authentication
