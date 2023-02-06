@@ -1,5 +1,6 @@
 import { GoogleLogin } from 'react-google-login';
 import { useGoogleLogin } from '../../hooks/useGoogleLogin';
+import { CLIENT_ID } from '../../utils/constants';
 import './Landing.scss';
 
 const Landing = () => {
@@ -14,8 +15,6 @@ const Landing = () => {
   const onFailure = (err: string) => {
     console.log('failed:', err);
   };
-
-  const clientId: string | undefined = `${process.env.REACT_APP_CLIENT_ID}`;
 
   return (
     <div className='m-0 p-0 landing-page'>
@@ -37,7 +36,7 @@ const Landing = () => {
         <div className='btn text-dark login-btn'>
           <span className='pr-4'> Get started </span>
           <GoogleLogin
-            clientId={clientId}
+            clientId={CLIENT_ID}
             buttonText='Sign in with Google'
             onSuccess={onSuccess}
             onFailure={onFailure}
