@@ -3,6 +3,7 @@ import Layout from '../../Components/Layout/Layout';
 import Private from '../../utils/PrivateRoutes';
 import Landing from '../Landing/Landing';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import SingleUser from '../Users/SingleUser';
 import Users from '../Users/Users';
 import './App.scss';
 
@@ -21,8 +22,16 @@ function App() {
                 </Private>
               }
             />
+            <Route
+              path=':id'
+              element={
+                <Private>
+                  <SingleUser />
+                </Private>
+              }
+            />
           </Route>
-      </Route>
+        </Route>
         <Route path='*' element={<PageNotFound />} />
       </Routes>
     </div>
