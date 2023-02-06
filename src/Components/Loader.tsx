@@ -1,10 +1,17 @@
+import { ThreeDots } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
-    <div className="w-50 h-25 bg-dark" >
-      <img className="w-100 h-100" src={require('../assets/loader-1.gif')} alt="" />
-    </div>
-  )
-}
+    <ThreeDots
+      height='80'
+      width='80'
+      radius='9'
+      color='#03e2b5'
+      ariaLabel='three-dots-loading'
+      wrapperStyle={{}}
+      visible={true}
+    />
+  );
+};
 
-export default Loader
+export default Loader;

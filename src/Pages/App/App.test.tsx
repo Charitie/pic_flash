@@ -5,6 +5,8 @@ import { renderWithContext } from '../../utils/test.data';
 import Albums from '../Albums/Albums';
 import SingleAlbum from '../Albums/SingleAlbum';
 import PageNotFound from '../PageNotFound/PageNotFound';
+import Photos from '../Photos/Photos';
+import SinglePhoto from '../Photos/SinglePhoto';
 import SingleUser from '../Users/SingleUser';
 import Users from '../Users/Users';
 import App from './App';
@@ -43,5 +45,17 @@ describe('Pages', () => {
     const singleAlbum = '/albums/1';
     renderWithContext(<SingleAlbum />, singleAlbum);
     expect(screen.getByTestId('single-album')).toBeInTheDocument();
+  });
+
+  it('should render photos page', () => {
+    const photosRoute = '/photo/1';
+    renderWithContext(<Photos />, photosRoute);
+    expect(screen.getByTestId('photos')).toBeInTheDocument();
+  });
+
+  it('should render single photo page', () => {
+    const singlePhotoRoute = '/photo/1';
+    renderWithContext(<SinglePhoto />, singlePhotoRoute);
+    expect(screen.getByTestId('single-photo')).toBeInTheDocument();
   });
 });

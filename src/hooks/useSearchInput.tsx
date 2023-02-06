@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { fetchAlbums } from '../Pages/Albums/albumsSlice';
+import { fetchPhotos } from '../Pages/Photos/photosSlice';
 import { fetchUsers } from '../Pages/Users/usersSlice';
 import { AppDispatch } from '../store';
 
@@ -16,6 +17,8 @@ export function useSearchInput() {
       dispatch(fetchUsers(searchParam));
     } else if (pathname.includes('/albums')) {
       dispatch(fetchAlbums(searchParam));
+    } else if (pathname.includes('/photos')) {
+      dispatch(fetchPhotos({ page: 1, limit: 5, searchParam }));
     }
   };
 
