@@ -2,8 +2,7 @@
 
 This project for viewing user's albums and photos
 ![CI/CD](https://github.com//Charitie/pic_flash/actions/workflows/main.yml/badge.svg?event=push)
-![CI/CD](https://github.com/Charitie/pic_flash/actions/workflows/main.yml/badge.svg)
-[![codecov.io](https://codecov.io/github/Charitie/pic_flash/coverage.svg?branch=main)](https://codecov.io/github/Charitie/pic_flash?branch=main)
+<!-- [![codecov.io](https://codecov.io/github/Charitie/pic_flash/coverage.svg?branch=main)](https://codecov.io/github/Charitie/pic_flash?branch=main)  -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Available Pages
 
