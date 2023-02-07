@@ -5,7 +5,6 @@ import { Album } from '../utils/types';
 const AlbumCard = ({ albums }: { albums: [] }) => {
   const [{ limit, page }] = usePageData()
 
-  console.log(albums.slice(page, limit))
   return (
     <div className='row row-cols-1 row-cols-sm-3 row-cols-md-4 g-4'>
       {albums.slice(page, limit + 1).map((album: Album) => {

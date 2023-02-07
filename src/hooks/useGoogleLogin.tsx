@@ -19,7 +19,6 @@ export function useGoogleLogin() {
 
   useEffect(() => {
     if (profile) {
-      console.log(profile)
       return navigate('/users');
     }
   }, [profile]);
