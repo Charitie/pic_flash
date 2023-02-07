@@ -51,7 +51,7 @@ export const fetchUserById = createAsyncThunk('users/fetchUserById', async (user
   return response.data;
 });
 
-export const fetchUserAlbums = createAsyncThunk('albums/fetchUserAlbums', async (userId: number) => {
+export const fetchUserAlbums = createAsyncThunk('users/fetchUserAlbums', async (userId: number) => {
   const response = await axios.get(`${BASE_URL}/users/${userId}/albums`);
   return response.data;
 });
