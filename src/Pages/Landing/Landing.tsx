@@ -45,8 +45,8 @@ const Landing = () => {
           />
         </div>
         <h1>
-          <a href='' className='btn-cta'>
-            Going nowhere
+          <a href='/nowhere' className='btn-cta'>
+            Getting started
           </a>
         </h1>
       </div>
