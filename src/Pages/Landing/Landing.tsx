@@ -44,6 +44,11 @@ const Landing = () => {
             isSignedIn={true}
           />
         </div>
+        <h1>
+          <a href='' className='btn-cta'>
+            Going nowhere
+          </a>
+        </h1>
       </div>
     </div>
   );
