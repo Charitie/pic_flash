@@ -45,7 +45,13 @@ const Landing = () => {
           />
         </div>
         <h1>
-          <a href='/nowhere' className='btn-cta'>
+          <a
+            href='/no-where'
+            onClick={() => {
+              (window as any).dataLayer.push({ event: 'loginCTA' });
+            }}
+            className='btn-cta'
+          >
             Getting started
           </a>
         </h1>
